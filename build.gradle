@@ -1,0 +1,43 @@
+buildscript {
+	ext {
+		springBootVersion = '1.5.8.RELEASE'
+	}
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+	}
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+
+group = 'com.ds.myportal'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 1.8
+
+repositories {
+	mavenCentral()
+}
+
+
+dependencies {
+
+	compile('org.springframework.boot:spring-boot-starter-web')
+	compile("org.springframework.boot:spring-boot-starter-security")
+	compile("org.springframework.ws:spring-ws-core")
+	compile("org.apache.httpcomponents:httpcore:4.4.6")	
+	compile("org.apache.httpcomponents:httpclient:4.5.3")
+	compile("org.apache.commons:commons-lang3:3.2") 
+	compile("org.apache.commons:commons-pool2:2.2")
+	compile("org.springframework:spring-jdbc")
+	compile("org.springframework:spring-core")
+	compile("commons-beanutils:commons-beanutils:1.8.3")
+	compile("commons-validator:commons-validator:1.4.1")
+	compile("commons-httpclient:commons-httpclient:3.1")	
+	 compile ("mysql:mysql-connector-java")
+	   compile 'commons-dbcp:commons-dbcp:1.4'
+	 
+}
